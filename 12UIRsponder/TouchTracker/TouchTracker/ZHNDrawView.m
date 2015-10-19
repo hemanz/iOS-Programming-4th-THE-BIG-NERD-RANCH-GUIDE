@@ -16,6 +16,10 @@
     if(self){
         self.finishedLines = [[NSMutableArray alloc] init];
         self.backgroundColor = [UIColor lightGrayColor];
+        
+        UITapGestureRecognizer *doubleTapRecongizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
+        doubleTapRecongizer.numberOfTapsRequired = 2;
+        [self addGestureRecognizer:doubleTapRecongizer];
     }
     return self;
 }
@@ -67,6 +71,11 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.finishedLines addObject:self.currentLine];
     self.currentLine = nil;
+    [self setNeedsDisplay];
+}
+
+- (void)doubleTap:(UIGestureRecognizer *)gr{
+    [self.finishedLines removeAllObjects];
     [self setNeedsDisplay];
 }
 
