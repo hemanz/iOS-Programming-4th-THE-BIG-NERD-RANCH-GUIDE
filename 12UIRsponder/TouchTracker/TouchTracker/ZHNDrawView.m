@@ -19,6 +19,7 @@
         
         UITapGestureRecognizer *doubleTapRecongizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
         doubleTapRecongizer.numberOfTapsRequired = 2;
+        doubleTapRecongizer.delaysTouchesBegan = YES;
         [self addGestureRecognizer:doubleTapRecongizer];
     }
     return self;

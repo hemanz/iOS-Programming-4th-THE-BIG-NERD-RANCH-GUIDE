@@ -85,6 +85,7 @@
 		63D3D5F61BD417CB00637F5E /* TouchTracker */ = {
 			isa = PBXGroup;
 			children = (
+				63D3D6261BDFD94300637F5E /* view */,
 				63D3D5FB1BD417CB00637F5E /* AppDelegate.h */,
 				63D3D5FC1BD417CB00637F5E /* AppDelegate.m */,
 				63D3D6231BD4195000637F5E /* ZHNDrawViewController.h */,
@@ -124,6 +125,13 @@
 				63D3D6121BD417CB00637F5E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63D3D6261BDFD94300637F5E /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +424,7 @@
 				63D3D6191BD417CB00637F5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63D3D61A1BD417CB00637F5E /* Build configuration list for PBXNativeTarget "TouchTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +433,7 @@
 				63D3D61C1BD417CB00637F5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
