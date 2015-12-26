@@ -30,7 +30,17 @@
         [[UIColor greenColor] setStroke];
         [path stroke];
     }
-    wth？
+    
+    UIImage *holyshit = [UIImage imageNamed:@"holyshit"];
+    [holyshit drawInRect:CGRectMake(100, 50, 200 , 400)];
+    
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGContextStrokePath(currentContext);
+    CGContextSaveGState(currentContext);
+    CGContextSetShadow(currentContext, CGSizeMake(4, 7), 3);
+    CGContextRestoreGState(currentContext);
+
 }
 
 
