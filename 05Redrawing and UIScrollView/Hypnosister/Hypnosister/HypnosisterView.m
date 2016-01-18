@@ -7,8 +7,23 @@
 //
 
 #import "HypnosisterView.h"
+@interface HypnosisterView()
+
+@property (strong, nonatomic)UIColor *circleCorlor;
+
+@end
 
 @implementation HypnosisterView
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [UIColor clearColor];
+        self.circleCorlor = [UIColor redColor];
+    }
+    return self;
+}
 
 - (void)drawRect:(CGRect)rect {
     CGRect bounds = self.bounds;
@@ -27,7 +42,7 @@
                       endAngle:M_PI*2.0
                      clockwise:YES];
         path.lineWidth = 10;
-        [[UIColor greenColor] setStroke];
+        [self.circleCorlor setStroke];
         [path stroke];
     }
     
@@ -43,5 +58,18 @@
 
 }
 
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"%@ was touched",self);
+    float red = (arc4random()%100)/100.0;
+    float bule = (arc4random()%100)/100.0;
+    float green = (arc4random()%100)/100.0;
+    self.circleCorlor = [UIColor colorWithRed:red
+                                        green:green
+                                         blue:bule alpha:1.0];
+}
 
+- (void)setCircleCorlor:(UIColor *)circleCorlor{
+    _circleCorlor = circleCorlor;
+    [self setNeedsDisplay];
+}
 @end
