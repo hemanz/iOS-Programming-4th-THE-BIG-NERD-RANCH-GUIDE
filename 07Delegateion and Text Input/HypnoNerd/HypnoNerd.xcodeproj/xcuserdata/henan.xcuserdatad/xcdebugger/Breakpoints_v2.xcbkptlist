@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HypnoNerd/HypnosisViewController.m"
-            timestampString = "477328084.768912"
+            timestampString = "477326749.900389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "-loadView"
             landmarkType = "5">
          </BreakpointContent>
